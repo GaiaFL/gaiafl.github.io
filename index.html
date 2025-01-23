@@ -15,25 +15,42 @@
             color: #333;
         }
         header {
-            background: #f7fa4d;
+            background: #eaec59;
             color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .header-top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
         }
-        .menu-icon {
-            font-size: 24px;
+        .language-switch {
             cursor: pointer;
-            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
         }
-        .menu-icon a {
-            color: #fff;
-            text-decoration: none;
+        .language-switch img {
+            width: 24px;
+            height: auto;
+            margin-left: 10px;
+        }
+        .header-title {
+            display: flex;
+            align-items: center;
         }
         h1 {
             margin: 0;
             font-size: 1.5em;
+        }
+        .email {
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #444;
         }
         main {
             max-width: 800px;
@@ -79,11 +96,27 @@
             color: #0073b1; /* LinkedIn default color as an example */
         }
     </style>
+    <script src="languages.js"></script>
 </head>
 <body>
     <header>
+        <div class="header-top">
+            <div class="header-title">
+                
+                <div class="language-switch" onclick="switchLanguage('en')">
+                    <img src="imgs/united-states.png" alt="English">
+                </div>
+                <div class="language-switch" onclick="switchLanguage('pt')">
+                    <img src="imgs/brazil.png" alt="Português">
+                </div>
+            
+            </div>
+        </div>
         <h1>Marianna Gois de Campos</h1>
-        <h4>mgcampos99@gmail.com</h4>
+
+        <p class="email" ><b>mgcampos99@gmail.com</b></p>
+        
+        
     </header>
     <main>
         
@@ -96,7 +129,7 @@
                 <li><strong>2022:</strong> Estágio no CNPEM, atuando com computação de alto desempenho e paralelização de processos.</li>
                 <li><strong>2022-2024:</strong> Duplo diploma na Télécom SudParis (França) em Engenharia de Computação e Mestrado, com ênfase em Arquitetura de Serviços Distribuídos.</li>
                 <li><strong>2024:</strong> Estágio na Amadeus em Nice, com o projeto de otimizar os serviços de ingestão de dados da plataforma da empresa.</li>
-                <li><strong>2024:</strong> Ingresso no Mestrado de Ciência da Computação na Unicamp.</li>
+                <li><strong>2025:</strong> Ingresso no Mestrado de Ciência da Computação na Unicamp.</li>
             </ul>
             </div>
 
@@ -125,7 +158,7 @@
             <li>“On the Simulation of LoRaWAN Networks: A Focus on Reproducible Parameter Configuration”.
                 Computer Networks and Communications, 2(1), 148–171, doi: 10.37256/cnc.2120244496.</li>
             <li>“LoRaWAN Infrastructure for Urban Waste Management: A Simulation Study”.
-                IEEE 9th World Forum on Internet of Things (WF-IoT), doi: 10.1109/WF-IoT58464.2023.10539568.</a>.</li>
+                IEEE 9th World Forum on Internet of Things (WF-IoT), doi: 10.1109/WF-IoT58464.2023.10539568.</a></li>
             
         </ul>
 
@@ -136,7 +169,7 @@
 
 
         <h2>Motivação</h2>
-        <p>Aprender sobre novas tecnologias e suas constantes atualizações, além do desejo de aplicar a tecnologia no meio social, de forma a aprimorar o conhecimento e o cotidiano de todos. </p>
+        <p>Aprender sobre novas tecnologias e suas constantes atualizações, além do desejo de aplicar a tecnologia no meio social, de forma a aprimorar o conhecimento e o cotidiano de todos.</p>
     </main>
     <footer>
         <div class="social-icons">
