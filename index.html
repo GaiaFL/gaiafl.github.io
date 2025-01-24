@@ -15,7 +15,7 @@
             color: #333;
         }
         header {
-            background: #eaec59;
+            background: #FFE4B5;
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -64,28 +64,29 @@
         }
         .content {
             display: flex;
+            flex-direction: column-reverse;
             align-items: flex-start;
         }
-        .text {
-            flex: 2;
-        }
+        
         .photo {
-            flex: 1;
-            margin-left: 20px;
+            width: 40%;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .photo img {
-            max-width: 90%;
+            max-width: 80%;
             height: auto;
             border-radius: 10px;
         }
-        @media (max-width: 768px) {
+        @media (min-width: 769px) {
             .content {
-                flex-direction: column;
+                flex-direction: row;
+                align-items: flex-start;
             }
             .photo {
-                margin-left: 0;
-                margin-bottom: 20px;
-                text-align: center;
+                width: auto;
+                margin-bottom: 0;
+                margin-right: 20px;
             }
         }
         footer {
@@ -104,6 +105,11 @@
         }
         .social-icons a:hover {
             color: #0073b1; /* LinkedIn default color as an example */
+        }
+        .visitor-counter {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
         }
     </style>
     <script src="languages.js"></script>
@@ -130,58 +136,7 @@
     </header>
     <main>
         
-        <h2>Formação e Experiência</h2>
-        
-        <div class="content">
-            
-            <div class="text">
-            <ul>
-                <li><strong>2018-2024:</strong> Bacharelado de Ciência da Computação na Unicamp.</li>
-                <li><strong>2019-2022:</strong> Iniciação científica no ramo de IoT, com publicações no IEEE e em periódico acadêmico.</li>
-                <li><strong>2022:</strong> Estágio no CNPEM, atuando com computação de alto desempenho e paralelização de processos.</li>
-                <li><strong>2022-2024:</strong> Duplo diploma na Télécom SudParis (França) em Engenharia de Computação e Mestrado, com ênfase em Arquitetura de Serviços Distribuídos.</li>
-                <li><strong>2024:</strong> Estágio na Amadeus em Nice, com o projeto de otimizar os serviços de ingestão de dados da plataforma da empresa.</li>
-                <li><strong>2025:</strong> Ingresso no Mestrado de Ciência da Computação na Unicamp.</li>
-            </ul>
-            </div>
-
-            <div class="photo">
-                <img src="imgs/image1.jpeg"  alt="Foto de Marianna">
-            </div>
-        </div>   
-        <h2>Habilidades Técnicas</h2>
-        <ul>
-            <li><strong>Programação:</strong> Python, C, Java, JavaScript, Golang, C++, C#, Kotlin, React.</li>
-            <li><strong>Redes e IoT:</strong> LoRa, Simuladores, Digital Twins.</li>
-            <li><strong>Cloud e Big Data:</strong> Kafka, Azure.</li>
-            <li><strong>HPC:</strong> Cuda, Open MPI.</li>
-
-        </ul>
-
-        <h2>Projetos Públicos no Github</h2>
-        <ul>
-            <li><a href="https://github.com/wasp-lahis/ns3-bmap">Simulações LoraWan no NS-3</a>.</li>
-            <li><a href="https://github.com/GaiaFL/Projet-Cassiopee">Sistema de Botão do Pânico</a>.</li>
-            
-        </ul>
-
-        <h2>Publicações</h2>
-        <ul>
-            <li>“On the Simulation of LoRaWAN Networks: A Focus on Reproducible Parameter Configuration”.
-                Computer Networks and Communications, 2(1), 148–171, doi: 10.37256/cnc.2120244496.</li>
-            <li>“LoRaWAN Infrastructure for Urban Waste Management: A Simulation Study”.
-                IEEE 9th World Forum on Internet of Things (WF-IoT), doi: 10.1109/WF-IoT58464.2023.10539568.</a></li>
-            
-        </ul>
-
-
-        <h2>Idiomas</h2>
-        <p>Proficiente em inglês com certificação em Cambridge (CAE) e TOEIC level C1.</p>
-        <p>Francês intermediário: Lê bem, entende bem, fala regular e (por ora) escrita ruim. </p>
-
-
-        <h2>Motivação</h2>
-        <p>Aprender sobre novas tecnologias e suas constantes atualizações, além do desejo de aplicar a tecnologia no meio social, de forma a aprimorar o conhecimento e o cotidiano de todos.</p>
+        <script>switchLanguage('pt')</script>
     </main>
     <footer>
         <div class="social-icons">
@@ -191,6 +146,7 @@
             <a href="https://letterboxd.com/MGDC/" ><img width="24" height="24" src="https://img.icons8.com/color/48/letterboxd.png" target="_blank" title="Letterboxd"/></a>
             
         </div>
+        <div id="visitor-counter" class="visitor-counter">Visitantes: 0</div>
         <p>&copy; 2025 - Marianna Gois de Campos</p>
 
     </footer>

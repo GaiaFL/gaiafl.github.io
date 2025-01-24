@@ -109,4 +109,21 @@ const translations = {
 function switchLanguage(lang) {
     const main = document.querySelector('main');
     main.innerHTML = translations[lang];
+};
+
+
+function updateVisitorCounter() {
+    const visitorCounterKey = 'visitorCount';
+    let count = localStorage.getItem(visitorCounterKey);
+    if (!count) {
+        count = 0;
+    }
+    count = parseInt(count) + 1;
+    localStorage.setItem(visitorCounterKey, count);
+    document.getElementById('visitor-counter').textContent = `Visitantes: ${count}`;
 }
+
+window.onload = () => {
+    updateVisitorCounter();
+};
+
